@@ -1,6 +1,5 @@
 package me.jamboxman5.abnpgame.packets;
 
-import me.jamboxman5.abnpgame.server.GameClient;
 import me.jamboxman5.abnpgame.server.GameServer;
 
 public class Packet01Disconnect extends Packet {
@@ -15,11 +14,6 @@ public class Packet01Disconnect extends Packet {
 	public Packet01Disconnect(String username) {
 		super(01);
 		this.username = username;
-	}
-
-	@Override
-	public void writeData(GameClient client) {
-		client.sendData(getData());
 	}
 
 	@Override

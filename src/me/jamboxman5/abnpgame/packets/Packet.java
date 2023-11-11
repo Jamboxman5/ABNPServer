@@ -1,6 +1,5 @@
 package me.jamboxman5.abnpgame.packets;
 
-import me.jamboxman5.abnpgame.server.GameClient;
 import me.jamboxman5.abnpgame.server.GameServer;
 
 public abstract class Packet {
@@ -22,9 +21,7 @@ public abstract class Packet {
 	public Packet(int packetId) {
 		this.packetID = (byte) packetId;
 	}
-	
-	public abstract void writeData(GameClient client);
-	
+		
 	public abstract void writeData(GameServer server);
 	
 	public abstract byte[] getData();

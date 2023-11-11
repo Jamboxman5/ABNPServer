@@ -1,6 +1,5 @@
 package me.jamboxman5.abnpgame.packets;
 
-import me.jamboxman5.abnpgame.server.GameClient;
 import me.jamboxman5.abnpgame.server.GameServer;
 
 public class Packet00Login extends Packet {
@@ -21,11 +20,6 @@ public class Packet00Login extends Packet {
 		this.username = username;
 		this.x = (int)d;
 		this.y = (int)e;
-	}
-
-	@Override
-	public void writeData(GameClient client) {
-		client.sendData(getData());
 	}
 
 	@Override

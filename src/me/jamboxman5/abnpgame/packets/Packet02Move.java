@@ -1,6 +1,5 @@
 package me.jamboxman5.abnpgame.packets;
 
-import me.jamboxman5.abnpgame.server.GameClient;
 import me.jamboxman5.abnpgame.server.GameServer;
 
 public class Packet02Move extends Packet {
@@ -28,10 +27,6 @@ public class Packet02Move extends Packet {
 		this.invert = invert;
 	}
 
-	@Override
-	public void writeData(GameClient client) {
-		client.sendData(getData());
-	}
 
 	@Override
 	public void writeData(GameServer server) {
